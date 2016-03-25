@@ -1,0 +1,14 @@
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+
+
+def main():
+    try:
+        port = 8000
+        server_address = ('', port)
+        server = HTTPServer(server_address, webServerHandler)
+        print "Tiny web Server running on %s" % server.server_address
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print " ^C entered, stopping web server..."
+        server.server_close()
+        

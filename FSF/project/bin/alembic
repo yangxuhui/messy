@@ -1,0 +1,9 @@
+#!/home/jimmy/Programming/course/FSF/project/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'alembic==0.8.4','console_scripts','alembic'
+__requires__ = 'alembic==0.8.4'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('alembic==0.8.4', 'console_scripts', 'alembic')()
+)
